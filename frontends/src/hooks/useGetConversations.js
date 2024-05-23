@@ -9,7 +9,7 @@ function useGetConversations() {
     const getConversations = async () => {
       setloading(true);
       try {
-        const res = await fetch("http://localhost:8000/api/users", {
+        const res = await fetch("https://chat-app-1-oa2k.onrender.com/api/users", {
           credentials: "include",
         });
         const data = await res.json();
