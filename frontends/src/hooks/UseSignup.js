@@ -23,21 +23,18 @@ function UserSignup() {
     if (!success) return;
     setLoading(true);
     try {
-      const res = await fetch(
-        "https://chat-app-1-oa2k.onrender.com/api/auth/signup",
-        {
-          method: "POST",
-          credentials: "include",
-          headers: { "Content-type": "application/json" },
-          body: JSON.stringify({
-            fullName,
-            userName,
-            password,
-            confirmPassword,
-            gender,
-          }),
-        }
-      );
+      const res = await fetch("https://chat-app-1-oa2k.onrender.com/api/auth/signup", {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({
+          fullName,
+          userName,
+          password,
+          confirmPassword,
+          gender,
+        }),
+      });
 
       const data = await res.json();
 
