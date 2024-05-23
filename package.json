@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon ./backend/server.js",
-    "start":"nodemon ./backend/server.js",
-    "build":"npm install && npm install --prefix frontends npm run build --prefix frontends"
+    "start": "nodemon ./backend/server.js",
+    "build": "npm install && (cd frontends && npm install && npm run build)"
   },
   "type": "module",
   "keywords": [],

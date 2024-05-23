@@ -4,10 +4,9 @@ import io from "socket.io-client";
 
 export const SocketContext = createContext();
 
-
-export const useSocketContext=()=>{
-    return useContext(SocketContext)
-}
+export const useSocketContext = () => {
+  return useContext(SocketContext);
+};
 
 export const SocketProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
@@ -15,7 +14,7 @@ export const SocketProvider = ({ children }) => {
   const { authUser } = useAuthContext();
   useEffect(() => {
     if (authUser) {
-      const socket = io("https://chat-app-1-oa2k.onrender.com/", {
+      const socket = io("https://chat-app-29u7.onrender.com/", {
         query: {
           userId: authUser._id,
         },
