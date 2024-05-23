@@ -15,12 +15,7 @@ const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true, // Allow requests from this origin
-  })
-);
+app.use(cors());
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);

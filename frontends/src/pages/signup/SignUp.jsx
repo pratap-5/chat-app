@@ -20,7 +20,6 @@ function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await signup(inputs);
-    toast.success("Successfully toasted!");
   };
 
   const handleCheckBox = (gender) => {
