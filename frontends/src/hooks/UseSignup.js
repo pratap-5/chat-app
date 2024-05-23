@@ -23,7 +23,7 @@ function UserSignup() {
     if (!success) return;
     setLoading(true);
     try {
-      const res = await fetch("https://chat-app-1-oa2k.onrender.com/api/auth/signup", {
+      const res = await fetch("http://localhost:8000/api/auth/signup", {
         method: "POST",
         credentials: "include",
         headers: { "Content-type": "application/json" },

@@ -25,6 +25,7 @@ function SignUp() {
   const handleCheckBox = (gender) => {
     setInputs({ ...inputs, gender });
   };
+  
   return (
     <div className="md:w-[600px] flex flex-col items-center justify-center min-w-96 mx-auto">
       <div className="w-full p-6 rounded shadow-sm bg-gray-400 bg-clip-padding backdrop-filter  backdrop-blur-lg bg-opacity-0 ">

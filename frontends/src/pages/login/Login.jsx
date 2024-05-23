@@ -7,11 +7,11 @@ function Login() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await login(userName,password);
+    await login(userName, password);
   };
-
   return (
     <div className=" md:w-[600px] flex flex-col items-center justify-center min-w-96 mx-auto">
       <div className="w-full  p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
@@ -59,7 +59,7 @@ function Login() {
             <button
               className="btn btn-block btn-sm mt-2 bg-slate-900"
               disabled={loading}
-             >
+            >
               {loading ? (
                 <span className="loading loading-spinner"></span>
               ) : (
