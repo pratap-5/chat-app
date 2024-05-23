@@ -51,7 +51,7 @@ function UserSignup() {
 
       //context
       setAuthUser(data);
-      console.log(data);
+  
     } catch (error) {
       toast.error(error.message);
     } finally {

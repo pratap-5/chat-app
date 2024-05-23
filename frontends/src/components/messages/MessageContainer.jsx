@@ -11,7 +11,7 @@ function MessageContainer() {
   }, [setSelectedConversation]);
 
   return (
-    <div className="md:min-w-[450px] flex flex-col p-1 ">
+    <div className=" sm:hidden  md:min-w-[450px] flex flex-col p-1 ">
       {selectedConversation ? (
         <>
           <div className="bg-slate-500 px-4 py-2 mb-2 rounded-full ">
