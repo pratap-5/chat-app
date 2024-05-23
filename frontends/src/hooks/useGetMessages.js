@@ -11,7 +11,7 @@ function useGetMessages() {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:8000/api/messages/${selectedConversation._id}`,
+          `https://chat-app-1-oa2k.onrender.com/messages/${selectedConversation._id}`,
           {
             credentials: "include",
           }
