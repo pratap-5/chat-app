@@ -24,7 +24,7 @@ function UserSignup() {
     setLoading(true);
     try {
       const res = await fetch(
-        "https://chat-app-1-oa2k.onrender.com/api/auth/signup",
+        "https://chat-app-29u7.onrender.com/api/auth/signup",
         {
           method: "POST",
           credentials: "include",

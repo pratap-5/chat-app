@@ -15,11 +15,7 @@ const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://chat-app-1-oa2k.onrender.com",
-  })
-);
+app.use(cors({}));
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);

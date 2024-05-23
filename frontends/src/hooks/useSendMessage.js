@@ -10,7 +10,7 @@ function useSendMessage() {
     setLoading(true);
     try {
       const res = await fetch(
-        `https://chat-app-1-oa2k.onrender.com/api/messages/send/${selectedConversation._id}`,
+        `https://chat-app-29u7.onrender.com/api/messages/send/${selectedConversation._id}`,
         {
           method: "POST",
           credentials: "include",
