@@ -6,8 +6,8 @@ const useConversation = create((set) => ({
     set({ selectedConversation }),
   messages: [],
   setMessages: (messages) => set({ messages }),
-  isopenChat: false,
-  setOpenChat: (isopenChat) => set({ isopenChat }),
+  isOpenChat: false,
+  setOpenChat: (isOpenChat) => set({ isOpenChat }),
 }));
 
 export default useConversation;

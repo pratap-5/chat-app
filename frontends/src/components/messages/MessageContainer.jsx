@@ -17,7 +17,7 @@ function MessageContainer() {
           <div className="bg-slate-500 px-4 py-2 mb-2 rounded-full ">
             <span className="label-text ">
               To:
-              <span className="text-gray-900 font-bold">
+              <span className="text-gray-900 font-bold ml-1">
                 {selectedConversation?.fullName}
               </span>
             </span>
