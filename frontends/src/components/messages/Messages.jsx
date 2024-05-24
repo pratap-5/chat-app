@@ -16,7 +16,7 @@ function Messages() {
 
   
   return (
-    <div className=" p-4 flex  flex-col overflow-auto h-full">
+    <div className=" p-4 flex  flex-col overflow-auto ">
       {loading && [...Array(3)].map((_, ind) => <MessageSkeleton key={ind} />)}
       {!loading &&
         messages.length !== 0 &&

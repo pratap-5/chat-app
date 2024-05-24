@@ -13,7 +13,7 @@ function MessageContainer() {
   }, [setSelectedConversation]);
 
   return (
-    <div className={`h-full w-full sm:w-full flex-col  p-1  sm:flex `}>
+    <div className={` w-full sm:w-full  flex-col  p-1  sm:flex `}>
       {selectedConversation ? (
         <>
           <div className="bg-slate-500 px-4 py-2 mb-2 rounded-full relative ">
