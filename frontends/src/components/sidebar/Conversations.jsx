@@ -7,7 +7,7 @@ function Conversations() {
   const { loading, conversations } = useGetConversations();
 
   return (
-    <div className="flex flex-col  gap-1 overflow-auto">
+    <div className="flex flex-col  gap-1 overflow-auto w-full p-1">
       {conversations.map((conversation, ind) => (
         <Conversation
           key={conversation._id}

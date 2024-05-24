@@ -1,15 +1,14 @@
-import React from 'react'
-import SideBar from '../../components/sidebar/SideBar'
-import MessageContainer from '../../components/messages/MessageContainer'
+import React from "react";
+import SideBar from "../../components/sidebar/SideBar";
+import MessageContainer from "../../components/messages/MessageContainer";
 
 function Home() {
   return (
-    <div className='flex sm:h-[450px] md:h-[550px] rounded-lg  overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0' > 
-      
-      <SideBar/>
-      <MessageContainer/>
+    <div className="flex h-screen w-screen  sm:w-auto md:w-[800px] md:h-[550px] rounded-lg  overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
+      <SideBar />
+      <MessageContainer />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

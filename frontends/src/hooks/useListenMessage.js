@@ -18,7 +18,7 @@ function useListenMessage() {
       });
 
     return () => socket.off("newMessage");
-  }, [socket, messages]);
+  }, [socket, messages,]);
 }
 
 export default useListenMessage;
