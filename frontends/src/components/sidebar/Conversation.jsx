@@ -3,7 +3,12 @@ import useConversation from "../../zustand/useConversation";
 import { useSocketContext } from "../../context/SocketContext";
 
 function Conversation({ conversation, lastIndex, emoj }) {
-  const { selectedConversation, setSelectedConversation } = useConversation();
+  const {
+    selectedConversation,
+    setSelectedConversation,
+    isOpenChat,
+    setOpenChat,
+  } = useConversation();
   const isSelected = selectedConversation?._id === conversation._id;
   const { onlineUser } = useSocketContext();
 
@@ -14,7 +19,10 @@ function Conversation({ conversation, lastIndex, emoj }) {
         className={` w-full flex gap-2 items-center hover:bg-sky-500 rounded p-2 py-1 cursor-pointer ${
           isSelected ? "bg-sky-500" : ""
         }`}
-        onClick={() => setSelectedConversation(conversation)}
+        onClick={() => {
+          setSelectedConversation(conversation);
+          setOpenChat(true);
+        }}
       >
         <div className={`avatar ${isOnline ? "online" : ""}`}>
           <div className="w-12 rounded-full ">
