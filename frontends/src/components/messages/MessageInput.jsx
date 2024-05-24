@@ -19,7 +19,7 @@ function MessageInput() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 my-3">
+    <form onSubmit={handleSubmit} className="p-4 my-3 w-full">
       <div className="w-full relative">
         <input
           type="text"
