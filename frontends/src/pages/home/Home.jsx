@@ -13,9 +13,8 @@ function Home() {
   return (
     <div className="flex h-screen w-screen  md:w-[800px] md:h-[550px] rounded-lg  overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
       {!isOpenChat || width > 680 ? <SideBar /> : ""}
-      
-      {width}
-      {isOpenChat}
+
+
       {width > 680 ? <MessageContainer /> : isOpenChat?<MessageContainer />:""}
     </div>
   );

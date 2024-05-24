@@ -4,8 +4,10 @@ import MessageInput from "./MessageInput";
 import { IoMdChatbubbles } from "react-icons/io";
 import useConversation from "../../zustand/useConversation";
 import { useAuthContext } from "../../context/AuthContext";
+import { IoMdArrowRoundBack } from "react-icons/io";
 function MessageContainer() {
-  const { selectedConversation, setSelectedConversation } = useConversation();
+  const { selectedConversation, setSelectedConversation, setOpenChat } =
+    useConversation();
   useEffect(() => {
     return () => setSelectedConversation(null);
   }, [setSelectedConversation]);
@@ -14,12 +16,18 @@ function MessageContainer() {
     <div className={`h-full w-full sm:w-full flex-col  p-1  sm:flex `}>
       {selectedConversation ? (
         <>
-          <div className="bg-slate-500 px-4 py-2 mb-2 rounded-full ">
+          <div className="bg-slate-500 px-4 py-2 mb-2 rounded-full relative ">
             <span className="label-text ">
               To:
               <span className="text-gray-900 font-bold ml-1">
                 {selectedConversation?.fullName}
               </span>
+            </span>
+            <span
+              className="absolute right-2 text-center"
+              onClick={() => setOpenChat(false)}
+            >
+              <IoMdArrowRoundBack />
             </span>
           </div>
           <Messages />
